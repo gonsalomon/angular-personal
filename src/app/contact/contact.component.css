@@ -1,0 +1,31 @@
+table {
+    width: 100%;
+}
+
+tbody.row {
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+a {
+    color: var(--text-color);
+}
+
+tr {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--background-button-color);
+}
+
+tr:nth-child(odd) {
+    background-color: var(--background-hovered-button-color);
+}
+
+img {
+    border-radius: 5px;
+}
