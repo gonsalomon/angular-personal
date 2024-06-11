@@ -28,5 +28,51 @@ a:hover {
 img {
     margin: 5px;
     border-radius: 10px;
-    border: solid 2px;
+    padding: 10px;
+}
+
+table {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+tbody {
+    width: 100%;
+}
+
+tr {
+    padding: 10px;
+    margin: 10px;
+    border: 2px black;
+    border-radius: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--background-button-color);
+}
+
+tr:nth-child(odd) {
+    background-color: var(--background-hovered-button-color);
+}
+
+tr.left {
+    align-self: flex-start;
+}
+
+tr.right {
+    align-self: flex-end;
+}
+
+img {
+    display: flex;
+    border-radius: 10px;
+}
+
+hr {
+    width: 100%;
+    margin: 0; /* Elimina márgenes que puedan estar limitando el ancho */
+    border: none; /* Elimina cualquier borde por defecto */
+    border-top: 1px solid var(--text-color); /* Ajusta el color según tu preferencia */
 }

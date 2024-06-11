@@ -9,16 +9,151 @@
       alt="A picture of Gonzalo Salomon">
   </div>
 </main>
-<header class="row">
-  <div>
-    <a href="">about me | sobre mí</a>
-  </div>
-  <div>
-    <a href="portfolio">my projects | mis proyectos</a>
-  </div>
-  <div>
-    <a href="contact">contact me | contactame</a>
-  </div>
-</header>
-<hr />
-<router-outlet />
+<!-- about -->
+<hr/>
+<h2>About me | Sobre mí</h2>
+<hr/>
+<div>
+  <!--had to use table for CSS nth-row functionality-->
+  <!--tuve que usar table para usar nth-row en CSS-->
+  <table>
+      <tbody>
+          <tr>
+              <p>EN Hello! I'm Gonzalo, 26 years old.I've enrolled in two IT college careers, Ingeniería de Sistemas
+                  (dropped
+                  due to COVID making it hard without having presential classes) and Tecnicatura Universitaria en
+                  Desarrollo
+                  de Aplicaciones Informáticas (ongoing). My vocation has always been programming, clearly! And after
+                  finishing my first year on the second
+                  career, I got a job as a Trainee BI Consultant, in We Plan.</p>
+          </tr>
+          <tr>
+              <p>There, I got to learn the basics on Business Intelligence and Data Warehousing, along with plenty of
+                  tools
+                  used
+                  within the BI world. We later started specializing into several branches; and while some went into
+                  data viz,
+                  some into
+                  MicroStrategy,
+                  I went into data engineering- SSIS, ETL development with Visual Studio along with SSAS, MDM cubes
+                  made in
+                  Visual
+                  Studio as well. As soon as our training stage was completed, getting into projects as they came into
+                  the
+                  company. And I got to
+                  work
+                  as a junior in ETL development as consultant for the CABA government, using plentiful amounts of SQL
+                  all
+                  around;
+                  while continuing to grow in my data warehouse building abilities.</p>
+          </tr>
+          <tr>
+              <p>We also got to train in knowledge on several promptly used tools in the industry, such as Alation
+                  (for data
+                  catalogs/governance), Soda (for data quality); and in the huge variety of tools there are,
+                  specializing in
+                  PowerBI -without ignoring the existence of Looker or Tableau.</p>
+          </tr>
+          <tr>
+              <p>ES Hola! Soy Gonzalo, tengo 26 años. Me metí en 2 carreras universitarias IT, Ingeniería de Sistemas
+                  (tuve
+                  que abandonar con el COVID por falta de
+                  presencialidad) y Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas (en
+                  progreso). Mi
+                  vocación siempre fue la programación, claramente! Y después de terminar mi primer año en esta
+                  segunda
+                  carrera,
+                  conseguí un puesto como Consultor BI Trainee, en We Plan.</p>
+          </tr>
+          <tr>
+              <p>Ahí conseguí aprender lo básico en Business Intelligence y Data Warehousing, junto con bastantes
+                  herramientas
+                  usadas dentro del mundo BI. Luego empezamos a especializarnos en diversas ramas; y mientras algunos
+                  iban
+                  a
+                  visualización, otros con
+                  MicroStrategy, yo me metí en ingeniería del dato- SSIS, desarrollo de ETLs con Visual Studio junto
+                  con
+                  SSAS,
+                  cubos MDM hechos en Visual Studio también. Una vez completamos nuestro entrenamiento, fuimos siendo
+                  asignados proyectos a medida que llegaban a la
+                  empresa.
+                  Y entré como desarrollador junior de ETLs como consultor para el gobierno de CABA, usando abundante
+                  SQL
+                  en
+                  todos
+                  lados; mientras continuaba creciendo en mis habilidades para construir data warehouses.</p>
+          </tr>
+          <tr>
+              <p>También pudimos entrenar nuestro conocimiento en herramientas extensamente utilizadas en la
+                  industria,
+                  tales
+                  como
+                  Alation (catálogo de datos/gobierno), Soda (para calidad de datos); y en la enorme variedad de
+                  herramientas
+                  disponibles, especializándonos en PowerBI -sin ignorar la existencia de Looker o Tableau.</p>
+          </tr>
+      </tbody>
+  </table>
+</div>
+<!-- portfolio -->
+<hr/>
+<h2>My portfolio | Mi portfolio</h2>
+<hr/>
+<h3>Angular</h3>
+<hr/>
+<div>
+  <!-- have to use table for CSS nth-row functionality -->
+  <!-- tuve que usar table para usar nth-row en CSS -->
+  <table>
+      <tbody class="col">
+          <tr class="row left">
+              <div>
+                  <img src="portfolio-1.png" height="200fr" alt="">
+              </div>
+              <div>
+                  <h3>This very page! | Esta misma página!</h3>
+                  <hr/>
+                  <p>Made with Angular 18, using some RxJs (BehaviorSubject) for dark/light theme, and a tiny bit of localStorage to persist the theme.</p>
+                  <hr/>
+                  <p>Hecha con Angular 18, usando algo de RxJs (BehaviorSubject) para el tema claro/oscuro, y un poco de localStorage para persistir el tema.</p>
+              </div>
+          </tr>
+          <hr/>
+          <tr class="row right">
+              <div>
+                  <h3>Chuck Norris jokes API consumption | Consumo de API de chistes de Chuck Norris</h3>
+                  <hr/>
+                  <p>Made with Angular 14, I consumed a public API, for the evaluation of a college subject.</p>
+                  <hr/>
+                  <p>Hecho con Angular 14, consumí una API pública, para la evaluación de una materia de la universidad.</p>
+              </div>
+              <div>
+                  <img src="portfolio-2.png" height="200fr" alt="">
+              </div>
+          </tr>
+      </tbody>
+  </table>
+</div>
+<!-- contact -->
+<div class="col">
+  <hr/>
+  <h2>Contact me! | Contactame!</h2>
+  <hr/>
+  <table>
+      <tbody class="row">
+          <tr>
+              <img [src]="lkpath" alt="LinkedIn logo">
+              <a href="">LinkedIn</a>
+          </tr>
+          <tr>
+              <img [src]="ghpath" height="128" alt="GitHub logo">
+              <a href="">GitHub</a>
+          </tr>
+          <tr>
+              <img [src]="gmpath" height="128" alt="Gmail logo">
+              <a href="mailto:salomongonzalo8@gmail.com">Mail</a>
+          </tr>
+      </tbody>
+  </table>
+</div>
