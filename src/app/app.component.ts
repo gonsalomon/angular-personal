@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ThemeService } from './theme.service';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -8,13 +9,26 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  constructor() {
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
-    document.body.classList.toggle('dark-theme', prefersDark.matches);
-  }
+export class AppComponent implements OnInit{
+  currentTheme: string = '';
   title = 'angular-personal';
-  toggleDarkTheme(): void {
-    document.body.classList.toggle('dark-theme');
+
+  constructor(private themeService: ThemeService) {}
+
+  ngOnInit() {
+    this.themeService.theme$.subscribe(theme => {
+      this.currentTheme = theme;
+      this.updateBodyClass(theme);
+    });
+  }
+
+  toggleTheme() {
+    const newTheme = this.currentTheme === 'light' ? 'dark' : 'light';
+    this.themeService.setTheme(newTheme);
+  }
+
+  private updateBodyClass(theme: string) {
+    document.body.className = '';
+    document.body.classList.add(theme);
   }
 }

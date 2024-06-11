@@ -32,13 +32,11 @@ body {
     --text-color: #222;
     --background-color: #ddd;
     text-align: center;
-    -webkit-transition: background-color text-color 1s linear;
-    transition: background-color 1s linear, text-color 1s linear;
     --background-button-color: #ccc;
     --background-hovered-button-color: #bbb;
 }
 
-body.dark-theme {
+body.dark {
     --text-color: #ddd;
     --background-color: #222;
     --background-button-color: #333;
